@@ -50,7 +50,6 @@ public class JobServiceImpl implements JobService {
     @Override
     public boolean updateJob(Long id, Job updatedJob) {
         Optional<Job>jobOptional=jobRepository.findById(id);
-
             if(jobOptional.isPresent()){
                 Job job=jobOptional.get();
                 job.setTitle(updatedJob.getTitle());
